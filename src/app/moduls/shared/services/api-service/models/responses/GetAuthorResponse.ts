@@ -1,7 +1,4 @@
-export enum Role {
-    User,
-    Admin
-}
+import { Role } from "src/app/models/enums/role";
 
 export class GetAuthorResponse {
     id: number;

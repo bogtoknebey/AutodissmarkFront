@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from './environments/environment';
 import { Poetry } from './models/poetry';
 
-import {CreatePoetryComponent} from './components/create-poetry/create-poetry.component';
-import {RandomPoetryComponent} from './components/random-poetry/random-poetry.component';
-import {SyntaxPoetryComponent} from './components/syntax-poetry/syntax-poetry.component';
+import {CreateTextComponent} from './moduls/create-text/components/create-text/create-text.component';
+import {ViewTextComponent} from './moduls/view-text/components/view-text/view-text.component';
+import {SyntaxTextComponent} from './moduls/syntax-text/components/syntax-text/syntax-text.component';
 import { delay } from 'rxjs';
 
 @Component({
@@ -14,9 +14,9 @@ import { delay } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  @ViewChild(CreatePoetryComponent) createCmp!: CreatePoetryComponent;
-  @ViewChild(RandomPoetryComponent) randomCmp!: RandomPoetryComponent;
-  @ViewChild(SyntaxPoetryComponent) syntaxCmp!: SyntaxPoetryComponent;
+  @ViewChild(CreateTextComponent) createCmp!: CreateTextComponent;
+  @ViewChild(ViewTextComponent) randomCmp!: ViewTextComponent;
+  @ViewChild(SyntaxTextComponent) syntaxCmp!: SyntaxTextComponent;
 
   name: number = -1;
   createModifyMode: boolean = false;

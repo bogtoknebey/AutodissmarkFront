@@ -1,0 +1,15 @@
+<div>
+    <p class="c-header"> 
+      <span class="text-button" (click)="resetNavigate()">PoetryViewer</span>
+    </p>
+    <span>
+      <select class="fx-btn l1-btn" [(ngModel)]="selectedAuthorId" (ngModelChange)="onAuthorSelect()">
+        <option *ngFor="let author of authors" [value]="author.id">{{ author.name }}</option>
+      </select>
+    </span>
+    <h2 class="fx-btn l1-subbtn">{{selectedAuthorTextsCount}}</h2>
+</div>
+  
+<router-outlet></router-outlet>
+  
+<div class="footer-block"></div>
